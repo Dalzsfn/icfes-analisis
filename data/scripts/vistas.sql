@@ -80,6 +80,3 @@ FROM saber11.base
 WHERE punt_global IS NOT NULL AND cole_depto IS NOT NULL
 GROUP BY anio, cole_depto
 ORDER BY anio, global_prom DESC;
-
-select * from saber11.v_desempeno_anual
-select * from saber11.v_brecha_colegio
