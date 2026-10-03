@@ -33,7 +33,7 @@ ORDER BY anio, estrato;
  
 CREATE OR REPLACE VIEW saber11.v_educacion_padres AS
 SELECT
-  GREATEST(edu_madre, edu_padre)  AS edu_max_padres,   -- 0 ninguno ... 5 postgrado
+  GREATEST(edu_madre, edu_padre)  AS edu_max_padres,   -
   count(*)                        AS evaluados,
   round(avg(punt_global),1)       AS global_prom,
   round(avg(punt_mate),1)         AS mate_prom,
