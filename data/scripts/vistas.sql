@@ -36,8 +36,6 @@ SELECT
   GREATEST(edu_madre, edu_padre)  AS edu_max_padres,   -
   count(*)                        AS evaluados,
   round(avg(punt_global),1)       AS global_prom,
-  round(avg(punt_mate),1)         AS mate_prom,
-  round(avg(punt_lectura),1)      AS lectura_prom
 FROM saber11.base
 WHERE punt_global IS NOT NULL AND GREATEST(edu_madre, edu_padre) IS NOT NULL
 GROUP BY 1
@@ -49,7 +47,6 @@ SELECT
   anio, cole_dane, cole_nombre, cole_naturaleza, cole_area, cole_depto, cole_mcpio,
   count(*)                    AS evaluados,
   round(avg(punt_global),1)   AS global_prom,
-  round(avg(punt_ingles),1)   AS ingles_prom
 FROM saber11.base
 WHERE punt_global IS NOT NULL AND cole_dane IS NOT NULL
 GROUP BY anio, cole_dane, cole_nombre, cole_naturaleza, cole_area, cole_depto, cole_mcpio
